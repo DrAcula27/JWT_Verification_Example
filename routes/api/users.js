@@ -10,8 +10,8 @@ const User = require("../../models/User");
 // @access:  Public
 router.get("/", (req, res) => res.send("User Route"));
 
-// @route:   GET api/users
-// @desc:    Register user and get JWT
+// @route:   POST api/users
+// @desc:    Register user and create JWT
 // @access:  Public
 router.post(
   "/",
@@ -28,9 +28,6 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-
-    // test if info being sent
-    // return res.send(req.body);
 
     const { name, email, password } = req.body;
 
