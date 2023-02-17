@@ -5,11 +5,6 @@ const jwt = require("jsonwebtoken");
 const { check, validationResult } = require("express-validator");
 const User = require("../../models/User");
 
-// @route:   GET api/users
-// @desc:    Test route
-// @access:  Public
-router.get("/", (req, res) => res.send("User Route"));
-
 // @route:   POST api/users
 // @desc:    Register user and create JWT
 // @access:  Public
